@@ -1,0 +1,10 @@
+name: Say hi!
+on:
+  push:
+    branches: [$default-branch]
+jobs:
+  say-hi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo "Hi!" to the user
+        run: echo "Hi!"
