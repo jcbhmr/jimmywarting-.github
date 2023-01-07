@@ -1,0 +1,7 @@
+{
+    "name": "Say hi!",
+    "description": "Says hi to the user",
+    "iconName": "emoji-wave",
+    "categories": ["Automation"],
+    "filePatterns": ["README.md"]
+}
