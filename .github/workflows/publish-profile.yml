@@ -17,7 +17,7 @@ jobs:
       - id: push_profile
         run: |
           set -e
-          git remote add profile "https://$GITHUB_ACTOR:$GH_PROFILE_TOKEN@github.com/jcbhmr/jcbhmr"
+          git remote add profile "https://jcbhmr:$GH_PROFILE_TOKEN@github.com/jcbhmr/jcbhmr"
           ref="$(git subtree split -P profile)"
           git push -f profile "$ref:main"
           echo "page_url=https://github.com/jcbhmr" >> $GITHUB_OUTPUT
