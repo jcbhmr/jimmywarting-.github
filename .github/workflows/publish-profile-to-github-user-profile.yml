@@ -31,7 +31,7 @@ jobs:
           gh_repo="$GITHUB_REPOSITORY_OWNER/$GITHUB_REPOSITORY_OWNER"
           git remote add profile "https://$creds@github.com/$gh_repo.git"
           git push -f profile "$BRANCH_REF:main"
-          echo "page_url=https://github.com/$github_repo" >> $GITHUB_OUTPUT
+          echo "page_url=https://github.com/$gh_repo" >> $GITHUB_OUTPUT
         env:
           GITHUBX_TOKEN_PROFILE: ${{ secrets.GITHUBX_TOKEN_PROFILE }}
           BRANCH_REF: ${{ steps.git-subtree-split.outputs.branch_ref }}
