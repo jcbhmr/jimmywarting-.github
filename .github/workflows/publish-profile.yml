@@ -11,6 +11,7 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
+          set -x
           creds="$GITHUB_REPOSITORY_OWNER:$GITHUBX_TOKEN_PROFILE"
           github_repo="$GITHUB_REPOSITORY_OWNER/$GITHUB_REPOSITORY_OWNER"
           remote="https://$creds@github.com/$github_repo.git"
