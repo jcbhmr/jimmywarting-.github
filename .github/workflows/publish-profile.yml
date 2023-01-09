@@ -18,7 +18,8 @@ jobs:
         run: |
           set -e
           git remote add profile "https://$GITHUB_ACTOR:$GH_PROFILE_TOKEN@github.com/jcbhmr/jcbhmr.git"
-          git subtree push -P profile profile main
+          git remote -v
+          git subtree push -fP profile profile main
           echo "page_url=https://github.com/jcbhmr" >> $GITHUB_OUTPUT
         env:
           GH_PROFILE_TOKEN: ${{ secrets.GH_PROFILE_TOKEN }}
