@@ -1,7 +1,0 @@
-{
-    "name": "Publish wiki",
-    "description": "Publishes wiki/ to GitHub wiki",
-    "iconName": "EMOJI-open-book",
-    "categories": ["Deployments"],
-    "filePatterns": ["wiki/Home.md"]
-}
