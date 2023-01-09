@@ -1,0 +1,37 @@
+name: Publish profile/* to GitHub user profile
+on:
+  push:
+    branches: [main]
+    paths:
+      - profile/**
+      - .github/workflows/publish-profile-to-github-user-profile.yml
+jobs:
+  publish-profile:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-profile
+      url: ${{ steps.git-push.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: git subtree split
+        id: git-subtree-split
+        run: |
+          branch_ref="$(git subtree split -P profile)"
+          echo "branch_ref=$branch_ref" >> $GITHUB_OUTPUT
+      - name: git push
+        id: git-push
+        run: |
+          creds="$GITHUB_REPOSITORY_OWNER:$GITHUBX_TOKEN_PROFILE"
+          gh_repo="$GITHUB_REPOSITORY_OWNER/$GITHUB_REPOSITORY_OWNER"
+          git remote add profile "https://$creds@github.com/$gh_repo.git"
+          git push -f profile "$BRANCH_REF:main"
+          echo "page_url=https://github.com/$github_repo" >> $GITHUB_OUTPUT
+        env:
+          GITHUBX_TOKEN_PROFILE: ${{ secrets.GITHUBX_TOKEN_PROFILE }}
+          BRANCH_REF: ${{ steps.git-subtree-split.outputs.branch_ref }}
