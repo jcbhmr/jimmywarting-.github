@@ -1,0 +1,20 @@
+name: Publish profile/* to jcbhmr/jcbhmr
+on:
+  push:
+    branches: [main]
+    paths: [profile/**, .github/workflows/publish-profile.yml]
+jobs:
+  publish-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: |
+          creds="$GITHUB_REPOSITORY_OWNER:$GITHUBX_TOKEN_PROFILE"
+          github_repo="$GITHUB_REPOSITORY_OWNER/$GITHUB_REPOSITORY_OWNER"
+          remote="https://$creds@github.com/$github_repo.git"
+          split_branch="$(git subtree split -P profile)"
+          git push "$remote" -f "$split_branch:main"
+        env:
+          GITHUBX_TOKEN_PROFILE: ${{ secrets.GITHUBX_TOKEN_PROFILE }}
