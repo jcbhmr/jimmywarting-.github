@@ -1,0 +1,6 @@
+{
+  "name": "Deploy to GitHub Pages using Bikeshed",
+  "description": "Publish a specification document to GitHub pages using Bikeshed markup",
+  "iconName": "EMOJI-bicycle",
+  "categories": ["Deployments", "Bikeshed",  "GitHub Pages"]
+}

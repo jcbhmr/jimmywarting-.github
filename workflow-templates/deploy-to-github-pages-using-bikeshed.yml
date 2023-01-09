@@ -1,0 +1,29 @@
+name: Deploy to GitHub Pages using Bikeshed
+on:
+  push:
+    branches: [main]
+    paths: [src/**, .github/workflows/deploy-to-github-pages-using-bikeshed.yml]
+concurrency:
+  group: deploy-to-github-pages-using-bikeshed
+  cancel-in-progress: true
+jobs:
+  deploy-to-github-pages-using-bikeshed:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
+    permissions:
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          cache: pip
+      - run: pip install bikeshed && bikeshed update
+      - run: mkdir -vp dist && bikeshed spec src/index.bs dist/index.html
+      - uses: actions/configure-pages@v2
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: dist
+      - id: deploy-pages
+        uses: actions/deploy-pages@v1
+
