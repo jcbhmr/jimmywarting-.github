@@ -11,12 +11,12 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - run: |
-          set -x
+      - name: Split & push profile/ to jcbhmr/jcbhmr
+        run: |
           creds="$GITHUB_REPOSITORY_OWNER:$GITHUBX_TOKEN_PROFILE"
           github_repo="$GITHUB_REPOSITORY_OWNER/$GITHUB_REPOSITORY_OWNER"
-          remote="https://$creds@github.com/$github_repo.git"
+          git remote add profile "https://$creds@github.com/$github_repo.git"
           split_branch="$(git subtree split -P profile)"
-          git push "$remote" -f "$split_branch:main"
+          git push -f profile "$split_branch:main"
         env:
           GITHUBX_TOKEN_PROFILE: ${{ secrets.GITHUBX_TOKEN_PROFILE }}
