@@ -1,3 +1,11 @@
+# This GitHub Actions workflow is triggered when a push event occurs on the
+# main branch and changes are made to the src directory or {this file}. The
+# workflow runs in an Ubuntu environment, sets up a Python environment,
+# installs and updates the bikeshed package, uses bikeshed to generate an HTML
+# file from a .bs file, and then configures and deploys the generated HTML file
+# to GitHub Pages. The URL of the deployed page is stored in an environment
+# variable for later use. The workflow also has concurrency controls to cancel
+# any in-progress runs when a new run starts.
 name: Deploy to GitHub Pages using Bikeshed
 on:
   push:
@@ -26,4 +34,3 @@ jobs:
           path: dist
       - id: deploy-pages
         uses: actions/deploy-pages@v1
-
