@@ -3,9 +3,16 @@ on:
   push:
     branches: [$default-branch]
     paths: [wiki/**, .github/workflows/publish-wiki.yml]
+concurrency:
+  group: publish-wiki
+  cancel-in-progress: true
 jobs:
   publish-wiki:
+    environment:
+      name: github-wiki
+      url: ${{ steps.publish_wiki.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: jcbhmr/publish-wiki@v1
+      - id: publish_wiki
+        uses: jcbhmr/publish-wiki@v1
