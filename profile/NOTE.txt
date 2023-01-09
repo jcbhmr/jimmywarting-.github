@@ -1,9 +1,0 @@
-Hey there!
-
-This repo is just a place for me to store my GitHub profile README. There's no
-code or anything else in here - just the README. If you want to check out the
-source for that, you can find it at jcbhmr/.github[^1].
-
-Thanks for stopping by! ❤️
-
-[^1]: https://github.com/jcbhmr/.github/tree/main/profile
