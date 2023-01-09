@@ -1,0 +1,25 @@
+name: Publish profile/README.md
+on:
+  push:
+    branches: [main]
+    paths: [profile/**, .github/workflows/publish-profile.yml]
+concurrency:
+  group: publish-profile
+  cancel-in-progress: true
+jobs:
+  publish-profile:
+    environment:
+      name: profile
+      url: ${{ steps.push__profile.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - id: push__profile
+        run: |
+          set -e
+          git remote add profile "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/jcbhmr/jcbhmr.git"
+          git subtree push -P profile profile main
+          echo "page_url=https://github.com/jcbhmr" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_PROFILE_TOKEN: ${{ secrets.GITHUB_PROFILE_TOKEN }}
+
