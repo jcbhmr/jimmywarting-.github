@@ -10,11 +10,11 @@ jobs:
   publish-profile:
     environment:
       name: profile
-      url: ${{ steps.push__profile.outputs.page_url }}
+      url: ${{ steps.push_profile.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - id: push__profile
+      - id: push_profile
         run: |
           set -e
           git remote add profile "https://$GITHUB_ACTOR:$GH_PROFILE_TOKEN@github.com/jcbhmr/jcbhmr.git"
