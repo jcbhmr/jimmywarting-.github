@@ -1,13 +1,3 @@
-# This GitHub Actions workflow is named "Publish wiki/ to GitHub wiki". It is
-# triggered on a push to the default branch, and specifically when changes are
-# made to the "wiki" directory or the workflow file itself. When this workflow
-# runs, it will create an environment variable called "github-wiki" that stores
-# the URL of the published wiki page. The workflow will run on the latest
-# version of Ubuntu and it will perform two steps:
-#
-# 1. Check out the repository.
-# 2. Use the "jcbhmr/publish-to-github-wiki" action to publish the wiki to the
-#     GitHub wiki for the repository.
 name: Publish wiki/ to GitHub wiki
 on:
   push:
