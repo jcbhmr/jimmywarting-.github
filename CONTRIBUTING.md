@@ -7,7 +7,7 @@ report 🐛, a feature request 💡, or a Pull Request 🚀.
 - **❓ I have a question:** Open an Issue
 - **🐛 I found a bug:** Open an Issue
 - **💡 I have an idea:** Open an Issue
-- **💻 I want to write code:** [See below](#writing-code)
+- **💻 I want to code:** [See below](#writing-code)
 
 If you like the project, but just don't have time to contribute, that's OK too!
 You can also star the project ⭐, rave about it online 💬, or add a link to us
