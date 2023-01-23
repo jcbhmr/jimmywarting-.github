@@ -9,7 +9,7 @@
 #     to the workflow output. This step requires the GITHUBX_TOKEN_PROFILE
 #     secret and uses the output of the git subtree split step as the BRANCH_REF
 #     environment variable.
-name: Publish profile/* to GitHub user profile
+name: Publish profile/ to GitHub user profile
 on:
   push:
     branches: [main]
