@@ -12,7 +12,6 @@ possible, including:
 - Steps to reproduce the problem
 - Your operating system and version
 - Any error messages you're seeing
-- This will help us diagnose and resolve your issue as quickly as possible.
 
 ❓ If you just have a question, you can open a Discussion (if enabled) or an
 Issue. You're probably looking for the Q&A category in the Discussions tab.
