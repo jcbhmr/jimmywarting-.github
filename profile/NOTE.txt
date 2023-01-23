@@ -1,5 +1,5 @@
-🚀 This repo was deployed from jcbhmr/.github [1] using GitHub Actions. It is
-supposed to simulate the structure of an org account's profile/README.md being
-displayed without the need for a separate repo.
+🚀 This repo (jcbhmr/jcbhmr) was deployed from jcbhmr/.github [1] using GitHub
+Actions. It is supposed to simulate the structure of an org account's
+profile/README.md being displayed without the need for a separate repo.
 
 [1]: https://github.com/jcbhmr/.github/tree/main/profile
