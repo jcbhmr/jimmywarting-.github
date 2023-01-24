@@ -3,9 +3,9 @@
 All types of contributions are encouraged and valued, no matter if it's a bug
 report 🐛, a feature request 💡, or a Pull Request 🚀.
 
-- **❓ I have a question:** Open an Issue
+- **❓ I have a question:** Open a Discussion/Issue
 - **🐛 I found a bug:** Open an Issue
-- **💡 I have an idea:** Open an Issue
+- **💡 I have an idea:** Open a Discussion/Issue
 - **💻 I want to code:** [See below](#writing-code)
 
 If you like the project, but just don't have time to contribute, that's OK too!
