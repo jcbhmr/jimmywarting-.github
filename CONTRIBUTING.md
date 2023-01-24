@@ -3,7 +3,6 @@
 All types of contributions are encouraged and valued, no matter if it's a bug
 report 🐛, a feature request 💡, or a Pull Request 🚀.
 
-<!-- prettier-ignore -->
 - **❓ I have a question:** Open an Issue
 - **🐛 I found a bug:** Open an Issue
 - **💡 I have an idea:** Open an Issue
