@@ -16,10 +16,6 @@ You can also star the project ⭐, rave about it online 💬, or add a link to u
 including sensitive information to the issue tracker, or elsewhere in public.
 Instead sensitive bugs must be sent by email to jcbhmr@outlook.com.
 
-👩‍⚖️ When contributing to this project, you must agree that you have authored 100%
-of the content, that you have the necessary rights to the content and that the
-content you contribute may be provided under the project license.
-
 ## Writing code
 
 1. 🔀 Fork the repo
@@ -29,3 +25,7 @@ content you contribute may be provided under the project license.
 5. 🔖 Commit & push your changes
 6. 🔁 Open a PR to get your changes merged
 7. 🚀 Profit!
+
+👩‍⚖️ When contributing code to this project, you must agree that you have authored
+100% of the content, that you have the necessary rights to the content and that
+the content you contribute may be provided under the project license.
