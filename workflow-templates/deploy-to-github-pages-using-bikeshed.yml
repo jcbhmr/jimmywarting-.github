@@ -18,9 +18,6 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          cache: pip
       - run: pip install bikeshed && bikeshed update
       - run: mkdir dist && bikeshed spec src/index.bs dist/index.html
       - uses: actions/configure-pages@v2
