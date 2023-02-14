@@ -1,4 +1,4 @@
-**First off, thanks for taking the time to contribute! ❤️**
+**Thanks for taking the time to contribute! ❤️**
 
 All types of contributions are encouraged and valued, no matter if it's a bug
 report 🐛, a feature request 💡, or a Pull Request 🚀.
