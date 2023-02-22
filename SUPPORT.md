@@ -1,4 +1,4 @@
-**First off, thanks for using our project! ❤️**
+**Thanks for using our project! ❤️**
 
 We want to make sure you have the best experience possible while using our
 project, so we've provided a few ways for you to get help if you run into any
