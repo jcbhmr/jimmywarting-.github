@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          # This needs to be here, or else the git push fails. 🤷‍♂️
+          persist-credentials: false
       - run: |
           ref="$(git subtree split -P profile)"
           creds="$GITHUB_REPOSITORY_OWNER:$GITHUBX_TOKEN_PROFILE"
