@@ -1,0 +1,33 @@
+name: Publish profile
+on:
+  push:
+    branches: [main]
+    paths:
+      - profile/**
+      - .github/workflows/publish-profile.yml
+jobs:
+  publish-profile:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-profile
+      url: ${{ steps.publish-profile.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - run: |
+          ref="$(git subtree split -P profile)"
+          creds="$GITHUB_REPOSITORY_OWNER:$GITHUBX_TOKEN_PROFILE"
+          slug="$GITHUB_REPOSITORY_OWNER/$GITHUB_REPOSITORY_OWNER"
+          profile="https://$creds@github.com/$slug.git"
+          git push -f "$profile" "$ref:main"
+          page_url="https://github.com/$GITHUB_REPOSITORY_OWNER"
+          echo "page_url=$page_url" >> $GITHUB_OUTPUT
+        id: publish-profile
+        env:
+          # Expires on Sun, Apr 9 2023
+          GITHUBX_TOKEN_PROFILE: ${{ secrets.GITHUBX_TOKEN_PROFILE }}
