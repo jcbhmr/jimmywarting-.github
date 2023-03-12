@@ -16,7 +16,7 @@ You can also star the project ⭐, rave about it online 💬, or add a link to u
 including sensitive information to the issue tracker, or elsewhere in public.
 Instead sensitive bugs must be sent by email to jcbhmr@outlook.com.
 
-## Writing code
+## Contributing code
 
 1. 🔀 Fork the repo
 2. 💻 Open the repo in your editor
