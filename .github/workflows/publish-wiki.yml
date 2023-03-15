@@ -12,3 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: spenserblack/actions-wiki@v0.1.1
+        with:
+          wiki-directory: wiki
