@@ -2,9 +2,7 @@ name: Publish profile
 on:
   push:
     branches: [main]
-    paths:
-      - profile/**
-      - .github/workflows/publish-profile.yml
+    paths: [profile/**, .github/workflows/publish-profile.yml]
 concurrency:
   group: publish-profile
   cancel-in-progress: true
