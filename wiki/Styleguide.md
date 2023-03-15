@@ -12,7 +12,7 @@ formatters that I use and where I like to use them:
   Mardown.
 - **[Clang-Format]:** I use this for anything C++ & C related. I don't override
   any of the defaults, which means I tend to get LLVM-styled C++ code.
-  LLVM-styled code also happens to be the most popular on GitHub[^1].
+  LLVM-styled code also happens to be the most popular on GitHub.
 - **[cmake-format]:** For CMake code. No settings that I configure.
 - **[shfmt]:** Makes Bash code prettier. Also doesn't have any settings I
   change.
