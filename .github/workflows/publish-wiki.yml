@@ -10,11 +10,10 @@ permissions:
   contents: write
 jobs:
   publish-wiki:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: Andrew-Chen-Wang/github-wiki-action@v3
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_MAIL: jcbhmr@outlook.com
-          GH_NAME: jcbhmr
+      - uses: spenserblack/actions-wiki@v0.1.1
+        with:
+          token: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+          wiki-directory: wiki
