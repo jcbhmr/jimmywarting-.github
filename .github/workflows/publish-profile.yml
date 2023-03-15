@@ -5,15 +5,15 @@ on:
     paths:
       - profile/**
       - .github/workflows/publish-profile.yml
+concurrency:
+  group: publish-profile
+  cancel-in-progress: true
 jobs:
   publish-profile:
     runs-on: ubuntu-latest
     environment:
       name: github-profile
       url: ${{ steps.publish-profile.outputs.page_url }}
-    concurrency:
-      group: pages
-      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v3
         with:
