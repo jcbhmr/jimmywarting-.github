@@ -68,6 +68,12 @@ try to be patient with us as we make sure that it meets all the necessary
 🗣️ If you're interested in more debate about favorite link styles, check out
 [spenserblack/spenserblack#42].
 
+## JavaScript & TypeScript
+
+### Exports at the bottom
+
+I like to put my exports at the bottom in a big group. TODO: Continue this
+
 <!-- prettier-ignore-start -->
 [prettier]: https://prettier.io/
 [clang-format]: https://clang.llvm.org/docs/ClangFormat.html
