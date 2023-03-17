@@ -1,6 +1,0 @@
-{
-    "name": "Publish wiki/ to GitHub wiki",
-    "description": "Publish developer wiki docs to the GitHub wiki for easier consumption",
-    "iconName": "EMOJI-open-book",
-    "categories": ["Deployments", "Markdown"]
-}
