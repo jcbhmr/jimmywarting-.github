@@ -11,22 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-profile
-      url: ${{ steps.publish-profile.outputs.page_url }}
+      url: https://github.com/jcbhmr
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          # This needs to be here, or else the git push fails. 🤷‍♂️
-          persist-credentials: false
       - run: |
           ref="$(git subtree split -P profile)"
-          creds="$GITHUB_REPOSITORY_OWNER:$GITHUBX_TOKEN_PROFILE"
-          slug="$GITHUB_REPOSITORY_OWNER/$GITHUB_REPOSITORY_OWNER"
-          profile="https://$creds@github.com/$slug.git"
-          git push -f "$profile" "$ref:main"
-          page_url="https://github.com/$GITHUB_REPOSITORY_OWNER"
-          echo "page_url=$page_url" >> $GITHUB_OUTPUT
-        id: publish-profile
+          remote="https://x:$GITHUBX_TOKEN_PROFILE@github.com/jcbhmr/jcbhmr.git"
+          git push -f "$remote" "$ref:main"
         env:
           # Expires on Sun, Apr 9 2023
           GITHUBX_TOKEN_PROFILE: ${{ secrets.GITHUBX_TOKEN_PROFILE }}
