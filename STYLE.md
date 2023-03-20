@@ -17,8 +17,8 @@ formatters that I use and where I like to use them:
 - **[shfmt]:** Makes Bash code prettier. Also doesn't have any settings I
   change.
 
-As you may have noticed, I've learned to like (or _accept_) the defaults of the
-tools I use. It often means greater compatability and popularity.
+As you may have noticed, I've learned to like the defaults of the tools I use.
+It often means greater compatability and popularity.
 
 ## Using GitHub tools
 
