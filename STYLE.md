@@ -1,6 +1,27 @@
 This is a document that describes my own person stylistic preferences. Think of
 it as a personal styleguide.
 
+## How I write docs
+
+I sort of have three audiences in mind when writing READMEs, wiki docs, or just
+documentation in general:
+
+- **Users:** Users just want to use the thing. They like examples, docs, etc.
+  The "Installation" and "Usage" sections of a readme are for them. If there's a
+  GitHub Pages site, then it's usually designed for users.
+
+- **Tinkerers:** Tinkerers are people who want to see how the thing works, and
+  probably want to build it themselves. But they don't _necessarily_ want to
+  contribute changes back. They like outline documents, build instructions, code
+  comments, etc. The "Development" section of the readme and a developer GitHub
+  wiki are what I usually write with them in mind.
+
+- **Contributors:** These are people who want to suggest ideas, write code, or
+  help the project. They like conventions, walkthroughs, pointers to ask
+  questions, styleguides, encouraging language, etc. This is who I usually write
+  CONTRIBUTING.md with in mind. This group is a subset of the Tinkerers group,
+  so they also use the developer wiki/"Development" section of the readme.
+
 ## Formatters
 
 I like to use standard formatters. This helps me keep this styleguide as short
