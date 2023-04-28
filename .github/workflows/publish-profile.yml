@@ -17,11 +17,10 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - run: gh auth setup-git
-        env:
-          # Expires on Dec 31, 2023
-          GH_TOKEN: ${{ secrets.PROFILE_GITHUB_TOKEN }}
       - run: |
           ref="$(git subtree split -P profile)"
-          git remote add profile https://github.com/jcbhmr/jcbhmr.git
-          git push -f profile "$ref:main"
+          remote="https://x:$PROFILE_GITHUB_PAT@github.com/jcbhmr/jcbhmr.git"
+          git push -f "$remote" "$ref:main"
+        env:
+          # Expires on Dec 31, 2023
+          PROFILE_GITHUB_PAT: ${{ secrets.PROFILE_GITHUB_PAT }}
