@@ -1,0 +1,5 @@
+- github.com/jcbhmr/jcbhmr is deployed from github.com/jcbhmr/.github
+- I have un-enrolled jcbhmr/jcbhmr from the GitHub Archive Program
+- I have disabled GitHub Actions on jcbhmr/jcbhmr
+- I have disabled Issues on jcbhmr/jcbhmr
+- There's no way to disable PRs on a repo
