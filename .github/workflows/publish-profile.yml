@@ -17,10 +17,10 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+        env:
+          # Expires on Dec 31, 2023
+          PROFILE_GITHUB_TOKEN: ${{ secrets.PROFILE_GITHUB_TOKEN }}
       - run: |
           ref="$(git subtree split -P profile)"
-          remote="https://x:$GITHUBX_TOKEN_PROFILE@github.com/jcbhmr/jcbhmr.git"
+          remote="https://jcbhmr:$PROFILE_GITHUB_TOKEN@github.com/jcbhmr/jcbhmr.git"
           git push -f "$remote" "$ref:main"
-        env:
-          # Expires on Sun, Apr 9 2023
-          GITHUBX_TOKEN_PROFILE: ${{ secrets.GITHUBX_TOKEN_PROFILE }}
