@@ -16,12 +16,11 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          persist-credentials: false
-      - run: |
-          gh auth login
-          ref="$(git subtree split -P profile)"
-          git remote add profile https://github.com/jcbhmr/jcbhmr.git
-          git push -f profile "$ref:main"
+      - run: gh auth setup-git
         env:
           # Expires on Dec 31, 2023
           GH_TOKEN: ${{ secrets.PROFILE_GITHUB_TOKEN }}
+      - run: |
+          ref="$(git subtree split -P profile)"
+          git remote add profile https://github.com/jcbhmr/jcbhmr.git
+          git push -f profile "$ref:main"
