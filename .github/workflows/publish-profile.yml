@@ -22,5 +22,5 @@ jobs:
           remote="https://x:$PROFILE_PAT@github.com/jcbhmr/jcbhmr.git"
           git push -f "$remote" "$ref:main"
         env:
-          # Expires on Dec 31, 2023
+          # Expires on Wed, Sep 13 2023.
           PROFILE_PAT: ${{ secrets.PROFILE_PAT }}
