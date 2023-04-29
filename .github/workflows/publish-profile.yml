@@ -19,8 +19,8 @@ jobs:
           persist-credentials: false
       - run: |
           ref="$(git subtree split -P profile)"
-          remote="https://x:$PROFILE_GITHUB_PAT@github.com/jcbhmr/jcbhmr.git"
+          remote="https://x:$PROFILE_PAT@github.com/jcbhmr/jcbhmr.git"
           git push -f "$remote" "$ref:main"
         env:
           # Expires on Dec 31, 2023
-          PROFILE_GITHUB_PAT: ${{ secrets.PROFILE_GITHUB_PAT }}
+          PROFILE_PAT: ${{ secrets.PROFILE_PAT }}
