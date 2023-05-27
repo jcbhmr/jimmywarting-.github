@@ -2,7 +2,9 @@ name: Publish profile
 on:
   push:
     branches: [main]
-    paths: [profile/**, .github/workflows/publish-profile.yml]
+    paths:
+      - profile/**
+      - .github/workflows/publish-profile.yml
 concurrency:
   group: publish-profile
   cancel-in-progress: true
@@ -22,5 +24,4 @@ jobs:
           remote="https://x:$PROFILE_PAT@github.com/jcbhmr/jcbhmr.git"
           git push -f "$remote" "$ref:main"
         env:
-          # Expires on Wed, Sep 13 2023.
           PROFILE_PAT: ${{ secrets.PROFILE_PAT }}
