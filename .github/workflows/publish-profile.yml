@@ -5,6 +5,7 @@ on:
     paths:
       - profile/**
       - .github/workflows/publish-profile.yml
+  workflow_dispatch:
 concurrency:
   group: publish-profile
   cancel-in-progress: true
