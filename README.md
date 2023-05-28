@@ -1,10 +1,10 @@
-This is where all the [community health files] 🤝 are for [@jcbhmr]'s
-repositories. You're probably looking for [@jcbhmr's workflow templates] 🏭,
-[@jcbhmr's wiki] 📚, or [@jcbhmr's profile].
+This is where all the [community health files] 🤝 are for my repositories.
+You're probably looking for [my workflow templates] 🏭, [my wiki] 📚, or [my
+profile].
 
 <!-- prettier-ignore-start -->
-[@jcbhmr]: https://github.com/jcbhmr
-[@jcbhmr's wiki]: https://github.com/jcbhmr/.github/wiki
-[@jcbhmr's profile]: https://github.com/jcbhmr
-[@jcbhmr's workflow templates]: https://github.com/jcbhmr/.github/tree/main/workflow-templates
+[community health files]: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file
+[my wiki]: https://github.com/jcbhmr/.github/wiki
+[my profile]: https://github.com/jcbhmr
+[my workflow templates]: https://github.com/jcbhmr/.github/tree/main/workflow-templates
 <!-- prettier-ignore-end -->
