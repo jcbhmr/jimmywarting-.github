@@ -22,7 +22,7 @@ jobs:
           persist-credentials: false
       - run: |
           ref="$(git subtree split -P profile)"
-          remote="https://x:$PROFILE_PAT@github.com/jcbhmr/jcbhmr.git"
+          remote="https://x:$GITHUB_TOKEN@github.com/jcbhmr/jcbhmr.git"
           git push -f "$remote" "$ref:main"
         env:
-          PROFILE_PAT: ${{ secrets.PROFILE_PAT }}
+          GITHUB_TOKEN: ${{ secrets.PUBLISH_PROFILE_TOKEN }}
