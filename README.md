@@ -1,6 +1,6 @@
-This is where all the [community health files] are for [@jcbhmr]'s repositories.
-You're probably looking for [@jcbhmr's wiki], [@jcbhmr's profile], or [@jcbhmr's
-workflow templates].
+This is where all the [community health files] 🤝 are for [@jcbhmr]'s
+repositories. You're probably looking for [@jcbhmr's workflow templates] 🏭,
+[@jcbhmr's wiki] 📚, or [@jcbhmr's profile].
 
 <!-- prettier-ignore-start -->
 [@jcbhmr]: https://github.com/jcbhmr
