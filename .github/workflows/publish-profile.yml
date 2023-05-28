@@ -17,12 +17,14 @@ jobs:
       url: https://github.com/jcbhmr
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          persist-credentials: false
       - run: |
-          ref="$(git subtree split -P profile)"
-          remote="https://x:$GITHUB_TOKEN@github.com/jcbhmr/jcbhmr.git"
-          git push -f "$remote" "$ref:main"
+          gh auth setup-git
+          export GIT_DIR=$(mktemp -d)
+          export GIT_WORK_TREE=profile
+          gh repo clone jcbhmr/jcbhmr "$GIT_DIR"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.PUBLISH_PROFILE_TOKEN }}
