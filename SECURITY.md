@@ -1,3 +1,3 @@
-⚠️ You must never report security 🔒 related issues, vulnerabilities or bugs
+⚠️ You should never report security 🔒 related issues, vulnerabilities or bugs
 including sensitive information to the issue tracker, or elsewhere in public.
-Instead sensitive bugs must be sent by email to jcbhmr@outlook.com.
+Instead, please report security issues using the GitHub Security tab.
