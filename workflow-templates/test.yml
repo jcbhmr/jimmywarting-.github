@@ -5,16 +5,18 @@ on:
     paths:
       - src/**
       - test/**
-      - "*.json"
+      - "*.js"
       - "*.ts"
+      - "*.json"
       - .github/workflows/test.yml
   pull_request:
     branches: [$default-branch]
     paths:
       - src/**
       - test/**
-      - "*.json"
+      - "*.js"
       - "*.ts"
+      - "*.json"
       - .github/workflows/test.yml
 concurrency:
   group: test-${{ github.ref }}
