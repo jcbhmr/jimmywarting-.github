@@ -1,6 +1,6 @@
 {
-  "name": "Publish npm package, publish GitHub wiki, and deploy GitHub Pages",
-  "description": "On each Release:\n\n1. Publish to npm\n2. Publish wiki/ to GitHub wiki\n3. Publish docs to GitHub Pages",
+  "name": "Publish npm package, wiki, and docs",
+  "description": "Publish to npm, publish GitHub wiki, and deploy GitHub Pages",
   "iconName": "emoji-package",
   "categories": ["Continuous integration", "JavaScript", "npm"],
   "filePatterns": ["package.json"]
