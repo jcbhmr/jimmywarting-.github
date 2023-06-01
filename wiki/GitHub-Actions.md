@@ -52,16 +52,16 @@ through Vite and deployed.
         └── deploy.yml
 ```
 
-Now if you look in the workflow templates folder, you'll see that some of the
+~~Now if you look in the workflow templates folder, you'll see that some of the
 templates have suffixes like `+js` or `+typedoc` or similar. Those are suffixes
 that are only added when I want to **create a second `test.yml`** and the names
 would conflict. Thus, I need to add a suffix. **Make sure you remove the
-`+sub` suffix when instantiating the template!**
+`+sub` suffix when instantiating the template!**~~
 
-For instance, there's a `test.yml` for npm-based projects, and then there's a
+~~For instance, there's a `test.yml` for npm-based projects, and then there's a
 `test+action.yml` for GitHub Actions-based projects. The `test.yml` is the
 "default" name since it's used so often, and the `+action.yml` one is there
 since I use it often enough to want a template, but I can spare the few seconds
-to delete the `+action` suffix when instantiating it. 😊
+to delete the `+action` suffix when instantiating it. 😊~~
 
 [GitHub Actions]: https://github.com/features/actions
