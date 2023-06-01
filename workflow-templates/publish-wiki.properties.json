@@ -1,0 +1,6 @@
+{
+  "name": "Publish wiki",
+  "description": "Publishes doc files to the GitHub wiki",
+  "iconName": "emoji-test-tube",
+  "categories": ["Documentation", "Deployment"]
+}

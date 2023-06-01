@@ -1,6 +1,6 @@
 {
-  "name": "Publish npm package, wiki, and docs",
-  "description": "Publish to npm, publish GitHub wiki, and deploy GitHub Pages",
+  "name": "Preview the docs website as a .zip artifact",
+  "description": "Run npm publish when a new release is created",
   "iconName": "emoji-package",
   "categories": ["Continuous integration", "JavaScript", "npm"],
   "filePatterns": ["package.json"]
