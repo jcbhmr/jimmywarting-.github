@@ -1,7 +1,7 @@
 {
-  "name": "Preview the docs website as a .zip artifact",
-  "description": "Run npm publish when a new release is created",
-  "iconName": "emoji-package",
-  "categories": ["Continuous integration", "JavaScript", "npm"],
+  "name": "Preview the docs website",
+  "description": "Run 'npm run build-docs' and save it as an Artifact for the default branch and PRs",
+  "iconName": "emoji-eyes",
+  "categories": ["Deployment", "Website", "Documentation"],
   "filePatterns": ["package.json"]
 }

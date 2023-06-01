@@ -1,15 +1,14 @@
-name: Publish docs
+name: Preview docs
 on:
   push:
     branches: [$default-branch]
     paths:
-      - src/**
-      - test/**
+      - docs/**
       - "*rc"
       - "*.config.*"
       - "*.json"
       - "*.lock"
-      - .github/workflows/test.yml
+      - .github/workflows/preview-docs.yml
   pull_request:
     branches: [$default-branch]
     paths:
@@ -23,10 +22,6 @@ concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
 jobs:
-  preview-docs:
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy-pages.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
