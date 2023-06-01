@@ -1,6 +1,6 @@
 {
   "name": "Run JavaScript tests",
-  "description": "Runs Node.js tests on PRs and pushes to the default branch",
+  "description": "Run 'npm test' on PRs and pushes to the default branch",
   "iconName": "emoji-test-tube",
   "categories": ["Continuous integration", "JavaScript", "Node.js"],
   "filePatterns": ["package.json"]

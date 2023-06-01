@@ -1,4 +1,4 @@
-name: Test JS
+name: Test
 on:
   push:
     branches: [$default-branch]
