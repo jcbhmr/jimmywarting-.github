@@ -1,10 +1,13 @@
-name: Publish docs
+name: Deploy docs
 on:
   release:
     types: [published]
   workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 jobs:
-  publish-docs:
+  deploy-docs:
     environment:
       name: github-pages
       url: ${{ steps.deploy-pages.outputs.page_url }}
