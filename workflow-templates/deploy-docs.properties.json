@@ -1,0 +1,7 @@
+{
+  "name": "Deploy the docs website",
+  "description": "Run the build-docs script to build an npm-based web project",
+  "iconName": "emoji-books",
+  "categories": ["Deployment", "Website", "Documentation"],
+  "filePatterns": ["package.json"]
+}
