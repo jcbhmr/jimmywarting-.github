@@ -7,7 +7,7 @@ on:
       - .github/workflows/publish-profile.yml
   workflow_dispatch:
 concurrency:
-  group: publish-profile
+  group: ${{ github.workflow }}
   cancel-in-progress: true
 jobs:
   publish-profile:
