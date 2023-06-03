@@ -1,25 +1,25 @@
 name: Test
 on:
   push:
-    branches: [$default-branch]
+    branches: $default-branch
     paths:
       - src/**
       - test/**
       - "*rc"
-      - "*.config.*"
+      - "*config*"
       - "*.json"
       - "*.lock"
-      - .github/workflows/test-js.yml
+      - .github/workflows/test.yml
   pull_request:
-    branches: [$default-branch]
+    branches: $default-branch
     paths:
       - src/**
       - test/**
       - "*rc"
-      - "*.config.*"
+      - "*config*"
       - "*.json"
       - "*.lock"
-      - .github/workflows/test-js.yml
+      - .github/workflows/test.yml
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}
   cancel-in-progress: true

@@ -1,25 +1,25 @@
 name: Preview docs
 on:
   push:
-    branches: [$default-branch]
+    branches: $default-branch
     paths:
       - docs/**
       - "*rc"
-      - "*.config.*"
+      - "*config*"
       - "*.json"
       - "*.lock"
       - .github/workflows/preview-docs.yml
   pull_request:
-    branches: [$default-branch]
+    branches: $default-branch
     paths:
       - docs/**
       - "*rc"
-      - "*.config.*"
+      - "*config*"
       - "*.json"
       - "*.lock"
       - .github/workflows/preview-docs.yml
 concurrency:
-  group: ${{ github.workflow }}
+  group: ${{ github.workflow }}-${{ github.ref_name }}
   cancel-in-progress: true
 jobs:
   preview-docs:
