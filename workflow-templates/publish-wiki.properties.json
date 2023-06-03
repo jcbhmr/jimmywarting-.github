@@ -1,7 +1,7 @@
 {
   "name": "Publish wiki",
-  "description": "Publishes 'wiki/' to the GitHub wiki",
+  "description": "Publishes 'wiki/' to the GitHub wiki when a new Release is made.",
   "iconName": "_open-book",
-  "categories": ["Documentation", "Deployment"],
+  "categories": ["Deployment", "Documentation"],
   "filePatterns": ["wiki"]
 }
