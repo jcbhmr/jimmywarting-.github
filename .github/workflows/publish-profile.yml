@@ -1,7 +1,7 @@
 name: Publish profile
 on:
   push:
-    branches: [main]
+    branches: main
     paths:
       - profile/**
       - .github/workflows/publish-profile.yml
