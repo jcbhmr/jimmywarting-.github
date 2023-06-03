@@ -1,7 +1,7 @@
 {
   "name": "Publish wiki",
   "description": "Publishes 'wiki/' to the GitHub wiki",
-  "iconName": "emoji-open-book",
+  "iconName": "_open-book",
   "categories": ["Documentation", "Deployment"],
   "filePatterns": ["wiki"]
 }
