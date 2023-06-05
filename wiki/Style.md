@@ -27,8 +27,8 @@ def do_thing():
 
 This helps encourage breaking things into multiple files. I like this because:
 
-1. Shorter files means more separation of concerns. You split more stuff up with
-   explicit dependencies instead of a single file with spaghetti.
+1. You split more stuff up with explicit dependencies instead of a single file
+   with spaghetti.
 2. You can find the function that you want to edit faster. Having a quick
    os-native code tree (the file explorer) is nice!
 3. When glancing at diffs or PRs, you can see "10 files changed" instead of "1
@@ -76,4 +76,5 @@ try to be patient with us as we make sure that it meets all the necessary
 <!-- prettier-ignore-start -->
 [GitHub Search]: https://github.com/search
 [spenserblack/spenserblack#42]: https://github.com/spenserblack/spenserblack/discussions/42
+[recommended by Google]: https://developers.google.com/search/docs/crawling-indexing/url-structure#:~:text=Consider%20using%20hyphens%20to%20separate%20words%20in%20your%20URLs%2C%20as%20it%20helps%20users%20and%20search%20engines%20identify%20concepts%20in%20the%20URL%20more%20easily.%20We%20recommend%20that%20you%20use%20hyphens%20(%2D)%20instead%20of%20underscores%20(_)%20in%20your%20URLs.
 <!-- prettier-ignore-end -->
