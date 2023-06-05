@@ -9,5 +9,3 @@ why I use a GitHub wiki for dev-related project docs?]
 [why do I use `kebab-case` for file names, but only sometimes?]: https://github.com/jcbhmr/.github/wiki/Style#file-naming-convention
 [the reason why I use a GitHub wiki for dev-related project docs?]: https://github.com/jcbhmr/.github/wiki/Documentation#whats-the-deal-with-the-github-wiki
 <!-- prettier-ignore-end -->
-
-This should trigger the gollum event!
