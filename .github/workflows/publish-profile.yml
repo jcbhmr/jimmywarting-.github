@@ -24,7 +24,7 @@ jobs:
           export GIT_DIR=$(mktemp -d)
           trap 'rm -rf "$GIT_DIR"' SIGINT SIGTERM ERR EXIT
           export GIT_WORK_TREE=profile
-          export GIT_AUTHOR_DATE=format:short:1970-01-01
+          export GIT_AUTHOR_DATE='0 +0000'
           export GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE
           git init -b main
           git config user.name github-actions[bot]
