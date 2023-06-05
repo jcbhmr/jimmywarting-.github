@@ -25,5 +25,7 @@ jobs:
           git clone https://github.com/jcbhmr/.github.wiki.git "$GIT_DIR" --bare
           git config --unset core.bare
           git reset --hard
-      - run: ls -la wiki
-      # - uses: EndBug/add-and-commit@v9
+      - uses: EndBug/add-and-commit@v9
+        with:
+          push: false
+      - run: git show
