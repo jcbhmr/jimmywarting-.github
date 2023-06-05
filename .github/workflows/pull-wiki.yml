@@ -22,7 +22,7 @@ jobs:
           export GIT_DIR=$(mktemp -d)
           trap 'rm -rf "$GIT_DIR"' SIGINT SIGTERM ERR EXIT
           export GIT_WORK_TREE=wiki
-          git clone git@github.com:jcbhmr/jcbhmr.git "$GIT_DIR" --bare
+          git clone https://github.com/jcbhmr/.github.wiki.git "$GIT_DIR" --bare
           git config --unset core.bare
           git reset --hard
       - run: ls -la
