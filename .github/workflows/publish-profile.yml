@@ -32,4 +32,4 @@ jobs:
           git add -A
           git commit --allow-empty -m "Update profile $GITHUB_SHA"
           git remote add origin git@github.com:jcbhmr/jcbhmr.git
-          git push origin main
+          git push -f origin main
